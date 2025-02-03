@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medi Care - Emergency Care</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #343a40;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #007bff;
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+            display: inline-block;
+        }
+       
+        .content {
+            padding: 20px;
+        }
+        .hero {
+            background: url('/hero.webp') center/cover no-repeat;
+            height: 400px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero h1 {
+            font-size: 50px;
+            margin: 0;
+        }
+        .services, .contact {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        .service-card, .contact-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 30%;
+            margin: 10px;
+            text-align: center;
+        }
+        footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .contact-details {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .contact-details div {
+            margin: 0 10px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .hero h1 {
+                font-size: 40px;
+            }
+            .service-card, .contact-card {
+                width: 45%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 30px;
+            }
+            nav a {
+                padding: 10px 15px;
+            }
+            .service-card, .contact-card {
+                width: 100%;
+            }
+            .services, .contact {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 24px;
+            }
+            .service-card, .contact-card {
+                padding: 15px;
+                width: 100%;
+                margin: 10px 0;
+            }
+            footer {
+                padding: 15px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Medi Care</h1>
+    <p>Your Health, Our Priority</p>
+</header>
+
+<nav>
+
+        <a href="index3.html">Home</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    
+
+</nav>
+
+<section id="home" class="hero">
+    <h1>Emergency Care at Your Doorstep</h1>
+</section>
+
+<section id="services" class="content">
+    <h2>Our Services</h2>
+    <div class="services">
+        <div class="service-card">
+            <h3>24/7 Emergency Care</h3>
+            <p>We provide round-the-clock emergency medical services.</p>
+        </div>
+        <div class="service-card">
+            <h3>Ambulance Services</h3>
+            <p>Quick and reliable ambulance services at your doorstep.</p>
+        </div>
+        <div class="service-card">
+            <h3>Medical Consultation</h3>
+            <p>Access to expert doctors and specialists anytime.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="content">
+    <h2>Contact Us</h2>
+    <div class="contact">
+        <div class="contact-card">
+            <h3>Location</h3>
+            <p>123 MediCare Street, Health City, HC 12345</p>
+        </div>
+        <div class="contact-card">
+            <h3>Phone</h3>
+            <p>+1 800-123-4567</p>
+        </div>
+        <div class="contact-card">
+            <h3>Email</h3>
+            <p>contact@medicare.com</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Medi Care. All rights reserved.</p>
+</footer>
+
+<script>
+    // Smooth Scroll Effect for navigation links
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+
+</body>
+</html>

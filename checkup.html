@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Medicare - General Checkup</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        /* Navbar */
+        nav {
+            background-color:white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar-left a {
+            color:black;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-weight: bold;
+            font-size: 24px;
+        }
+       
+        .navbar-right a {
+            color:#2C2D2D;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-weight: bold;
+        }
+        
+        /* Mobile menu toggle */
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+        }
+        .menu-toggle div {
+            width: 30px;
+            height: 4px;
+            background-color: white;
+            margin: 5px 0;
+        }
+        .navbar-right {
+            display: flex;
+        }
+        /* Header */
+        header {
+            background-color: #3b5998;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section h2 {
+            color: #3b5998;
+        }
+        .section p {
+            line-height: 1.6;
+        }
+        .test-checkup {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .test-box {
+            text-align: center;
+            width: 30%;
+            margin-bottom: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            height: 350px; /* Ensure all boxes have the same height */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* This ensures the content is spaced properly */
+        }
+        .test-box img {
+            max-width: 100%;
+            height: 200px; /* Set fixed height for the images */
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .test-box h3 {
+            color: #3b5998;
+            margin-top: 10px;
+        }
+        /* Footer */
+        footer {
+            background-color:black ;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        footer a {
+            color:white;
+            text-decoration: none;
+            padding: 0 10px;
+        }
+        footer .social-icons {
+            margin-top: 10px;
+        }
+        footer .social-icons a {
+            margin: 0 10px;
+            font-size: 20px;
+            color: white;
+        }
+        footer .contact-info {
+            margin-top: 10px;
+            font-size: 16px;
+        }
+        footer .contact-info p {
+            margin: 5px 0;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .test-box {
+                width: 48%; /* Two boxes per row on medium screens */
+                height: 320px;
+            }
+
+            .navbar-right a {
+                padding: 10px 15px;
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .test-box {
+                width: 100%; /* Full width for each box on small screens */
+                height: auto;
+            }
+
+            .navbar-right {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                position: absolute;
+                top: 50px;
+                right: 0;
+                background-color: #3b5998;
+                text-align: center;
+            }
+
+            .navbar-right.active {
+                display: flex;
+            }
+
+            .navbar-right a {
+                padding: 10px 15px;
+                font-size: 16px;
+                text-align: center;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            header h1 {
+                font-size: 28px;
+            }
+
+            .container {
+                width: 90%; /* Smaller width on mobile */
+                padding: 10px;
+            }
+
+            footer .contact-info p {
+                font-size: 14px;
+            }
+
+            footer .social-icons a {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="navbar-left">
+            <a href="#home">Medicare</a>
+        </div>
+        <div class="navbar-right">
+            <a href="index3.html">Home</a>
+            <a href="#checkups">Checkups</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="menu-toggle" id="menuToggle">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </nav>
+    
+    <header id="home">
+        <h1>General Checkup</h1>
+        <p>Your health, our priority</p>
+    </header>
+
+    <div class="container">
+        <section class="section" id="checkups">
+            <h2>What is a General Checkup?</h2>
+            <p>A general checkup is a comprehensive health examination that helps identify any potential health concerns before they become serious. It typically includes a physical exam, blood tests, and a review of your health history.</p>
+        </section>
+        
+        <section class="section">
+            <h2>Common Tests Included in a General Checkup</h2>
+            <p>During a general checkup, your doctor may recommend a variety of tests based on your age, gender, and health history. Here are some common tests that may be conducted:</p>
+
+            <div class="test-checkup">
+                <div class="test-box">
+                    <img src="bloodpressure.jpg" alt="Blood Pressure Measurement">
+                    <h3>Blood Pressure Measurement</h3>
+                    <p>This test measures the force of your blood against the walls of your arteries. High blood pressure can lead to serious health problems like heart disease.</p>
+                </div>
+
+                <div class="test-box">
+                    <img src="cholesterol-test.jpg" alt="Cholesterol Screening">
+                    <h3>Cholesterol Screening</h3>
+                    <p>Cholesterol levels are checked through a blood test to assess the risk of heart disease and stroke. It’s important to monitor both total cholesterol and specific types like LDL and HDL.</p>
+                </div>
+
+                <div class="test-box">
+                    <img src="blood-sugar-test.jpg"alt="Blood Sugar Test">
+                    <h3>Blood Sugar Test</h3>
+                    <p>This test helps assess your risk for diabetes. It measures the glucose level in your blood and can help identify early signs of the disease.</p>
+                </div>
+            </div>
+
+            <div class="test-checkup">
+                <div class="test-box">
+                    <img src="cbc-completebloodcount.jpg" alt="Complete Blood Count (CBC)">
+                    <h3>Complete Blood Count (CBC)</h3>
+                    <p>A CBC is a broad screening test to check for conditions like anemia, infection, and many other diseases. It measures various components of your blood, including red and white blood cells and platelets.</p>
+                </div>
+
+                <div class="test-box">
+                    <img src="urinalysis.jpg" alt="Urinalysis">
+                    <h3>Urinalysis</h3>
+                    <p>A urinalysis tests the content of your urine and can help detect signs of kidney disease, diabetes, and urinary tract infections.</p>
+                </div>
+
+                <div class="test-box">
+                    <img src="Electrocardiogram.jpg" alt="Electrocardiogram (ECG)">
+                    <h3>Electrocardiogram (ECG)</h3>
+                    <p>An electrocardiograph is a test used to measure the electrical activity of the heart. The test takes only about a few minutes and is devoid of any pain.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Why Regular Checkups are Important</h2>
+            <p>Regular checkups allow for early detection of health problems, ensuring better treatment outcomes. They help monitor any chronic conditions, prevent future health issues, and keep you on the path to a healthier life.</p>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="contact-info">
+            <p><strong>Contact Us</strong></p>
+            <p>Location: 123 Health St, Wellness City, State, 12345</p>
+            <p>Mobile: +1 234 567 890</p>
+        </div>
+        <div class="social-icons">
+            <a href="#" target="_blank">&#xf09a;</a> <!-- Facebook -->
+            <a href="#" target="_blank">&#xf099;</a> <!-- Twitter -->
+            <a href="#" target="_blank">&#xf16d;</a> <!-- Instagram -->
+            <a href="#" target="_blank">&#xf0e0;</a> <!-- Email -->
+        </div>
+        <p>&copy; 2025 Medicare | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms & Conditions</a></p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        const menuToggle = document.getElementById("menuToggle");
+        const navbarRight = document.querySelector(".navbar-right");
+
+        menuToggle.addEventListener("click", () => {
+            navbarRight.classList.toggle("active");
+        });
+    </script>
+
+</body>
+</html>
